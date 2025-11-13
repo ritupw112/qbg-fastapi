@@ -5,3 +5,6 @@ git commit -m "Initial commit - QBG FastAPI"
 git branch -M main
 git remote add origin https://github.com/ritupw112/qbg-fastapi.git
 git push -u origin main
+git add requirements.txt
+git commit -m "Added requirements.txt for Render deployment"
+git push origin main
