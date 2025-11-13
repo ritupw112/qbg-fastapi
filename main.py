@@ -1,8 +1,18 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 app = FastAPI()
+
+# ✅ Enable CORS (fixes "Failed to fetch" error)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # you can replace * with your domain later (e.g. "https://ritupw112.github.io")
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 API_BASE = "https://api.penpencil.co/qbg/questions/"
 HEADERS = {
