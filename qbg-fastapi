@@ -1,0 +1,7 @@
+cd "C:\Users\Ritu\QBG_FastAPI"
+git init
+git add .
+git commit -m "Initial commit - QBG FastAPI"
+git branch -M main
+git remote add origin https://github.com/ritupw112/qbg-fastapi.git
+git push -u origin main
