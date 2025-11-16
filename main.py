@@ -16,7 +16,7 @@ app.add_middleware(
 
 API_BASE = "https://api.penpencil.co/qbg/questions/"
 HEADERS = {
-    "authorization": "Bearer ff670300e8974ed8a8c2ef8f03da7243df5b3f3627723a8a5eaf645c1266c815",
+    "authorization": "Bearer 30591f92adaf873da747d22154ee26c3f51f5dbb287b9619b975929510d4cf02",
     "user-id": "656709bd475f940018db9bec",
     "organization-id": "5eb393ee95fab7468a79d189",
     "client-type": "QBG",
@@ -105,3 +105,4 @@ def qtype(ids: str):
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
         results = list(ex.map(get_type, ids_list))
     return results
+
